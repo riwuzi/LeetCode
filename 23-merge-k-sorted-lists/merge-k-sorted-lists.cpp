@@ -10,8 +10,7 @@
  */
 class Solution {
 public:
-
-    
+ 
     ListNode* mergeKLists(vector<ListNode*>& lists) {
         vector<int> v;
 
@@ -25,8 +24,7 @@ public:
 
         int i,j;
 
-        cout<<"AAA"<<endl;
-
+        
         for(i=0;i<n;++i)
         {
             ListNode* current = lists[i];
@@ -38,27 +36,19 @@ public:
             
         }
 
-        cout<<"BBB"<<endl;
 
         stable_sort(v.begin(), v.end());
         int f=v.size();
 
-       // for(i=0;i<f;++i)
-       //  cout<<v[i]<<" ";
-       // cout<<endl;
-
-
+       
         ListNode* head=nullptr;
         ListNode* temp;
         
-        cout<<"CCC"<<endl;
+        
         for(i=0;i<f;++i)
           {
             ListNode* A=new ListNode(v[i]);
            
-
-            cout<<"DDD: "<<i<<endl;
-
             if(head==nullptr)
              {
                 temp=A;
@@ -73,12 +63,7 @@ public:
           }
 
         ListNode* temp1=head;
-        while (temp1 != nullptr) 
-            { 
-                cout<<temp1->val<<" ";
-                temp1 = temp1->next; 
-            } 
-        cout<<"EEE"<<endl;
+        
         return head;
         
     }
